@@ -453,6 +453,15 @@ header a:active {
     align-items: center;
   }
 
+  .skill-section-2 {
+    margin: 0
+  }
+  
+  .influencer-wrapped {
+    display: flex;
+    justify-content: space-around;
+  }
+
   .navigation ul {
     /* flex-direction: column; */
     gap: 10px;

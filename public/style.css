@@ -331,10 +331,6 @@ header a:active {
   transform: scale(1.2);
 }
 
-.footer-wrapped {
-
-}
-
 .fade-in-section {
   opacity: 0;
   transform: translateY(40px);
@@ -415,7 +411,7 @@ header a:active {
   border-radius: 15px;
   /* display: flex; */
   width: 100%;
-  height: 450px;
+  min-height: 450px;
   font-size: 20px;
   text-align: justify;
   padding: 15px;
@@ -446,3 +442,93 @@ header a:active {
   cursor: pointer;
 
 }
+
+@media (max-width: 992px) {
+  /* .header-container, */
+  .cards-wrapped,
+  .skill-section,
+  .skill-section-2,
+  .container-social {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navigation ul {
+    /* flex-direction: column; */
+    gap: 10px;
+  }
+
+  .cards {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .skill-cube {
+    margin: 10px 0;
+  }
+
+  .introduction-card {
+    height: auto;
+  }
+}
+
+/* Адаптив для телефонов */
+@media (max-width: 576px) {
+  .logotext {
+    font-size: 24px;
+  }
+
+  .morphbig {
+    font-size: 28px;
+  }
+
+  .undermorph {
+    font-size: 16px;
+  }
+
+  .button-start {
+    font-size: 16px;
+    width: 150px;
+    height: 45px;
+  }
+
+  .introduction-card {
+    padding: 10px;
+    font-size: 16px;
+    width: auto;
+    height: auto;
+    margin-bottom: 50px;
+  }
+
+  .skill-cube {
+    width: 100px;
+    height: 100px;
+  }
+
+  .project-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer {
+    flex-direction: column;
+    height: auto;
+    padding: 15px 0;
+  }
+
+  .footer-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .list-footer-1,
+  .list-footer-2 {
+    margin: 0;
+  }
+
+  .back-to-top {
+    margin-top: 10px;
+  }
+}
+

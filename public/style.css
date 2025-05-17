@@ -9,6 +9,9 @@
   font-style: normal;
 }
 
+a {
+  text-decoration: none;
+}
 
 h1 {
   font-size: inherit;
@@ -51,9 +54,8 @@ header a:active {
   width: 100%;
   top: 0;
   left: 0;
-  background-color: #f4f7f97e;
   z-index: 1000;
-
+  background-color: transparent !important;
 }
 
 .logotext {
@@ -114,7 +116,10 @@ header a:active {
 
 .about {
   background-color: #f4f7f9;
-
+  display: flex;
+  justify-content: space-between;
+  height: 85vh;
+  align-items: center;
 }
 
 .cards-title {
@@ -156,6 +161,9 @@ header a:active {
   padding: 10px;
   background-color: #f4f7f9;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+  margin-left: 15px;
+  height: 200px;
+  align-items: center;
 }
 
 .cards:hover {
@@ -181,7 +189,6 @@ header a:active {
   height: 150px;
   width: 150px;
   background-color: #d7e2ff;
-  margin-left: 20px;
   transition: 0.3s;
   display: flex;
   justify-content: center;
@@ -206,9 +213,18 @@ header a:active {
 }
 
 .my-activities {
-  background-color: #f4f7f9;
+  background-image: linear-gradient(to bottom, #f4f7f9, #d7e2ff, #f4f7f9);
+
+  display: flex;
+  align-items: center;
+  height: 85vh;
 
 }
+
+.my-activities .skill-cube + .skill-cube {
+  margin-left: 30px;
+}
+
 .projects-title {
   font-size: 35px;
 }
@@ -218,8 +234,9 @@ header a:active {
   color: #87b9ff
 } */
 .influencer-wrapped {
-
+  min-width: 940px;
 }
+
 .first-section {
   width: 300px;
   height: 586px;
@@ -272,7 +289,7 @@ header a:active {
 
 .footer {
   width: 100%;
-  height: 120px;
+  height: 110px;
   background-color: #939bb1;
 
   display: flex; 
@@ -345,10 +362,11 @@ header a:active {
 
 .introduction-section {
   width: 100%;
-  background-color: #f4f7f9;
+  background-image: linear-gradient(to bottom, #f4f7f9, #d7e2ff, #f4f7f9);
   min-height: 100vh;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .introduction-wrapper {
@@ -402,7 +420,7 @@ header a:active {
 .empty-1 {
   width: 100%;
   background-color: #f4f7f9;
-  height: 100px;
+  height: 10px;
 }
 
 .introduction-card {
@@ -418,6 +436,7 @@ header a:active {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  box-shadow: 1px 1px 10px 2px #d7e2ff;
 }
 
 .my-img {
@@ -443,8 +462,196 @@ header a:active {
 
 }
 
+.contact {
+  background-color: #f4f7f9;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+
+}
+
+.contact-wrapped {
+  min-width: 740px;
+  height: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+.contact-me {
+    font-size: 40px;
+    font-weight: bolder;
+}
+.buttons-contact {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.contact-button {
+  text-align: center;
+}
+
+.button-start + .button-start {
+  margin-left: 30px
+}
+
+#modal-window {
+  display: none;
+  background-color: #ffffffd4;
+  position: fixed;
+  width: 300px;
+  min-height: 80px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  z-index: 1001;
+  transform: translate(-50%, 100%);
+  border: solid 1px black;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgb(255, 255, 255);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#modal-window-gmail {
+    display: none;
+    background-color: #ffffffd4;
+    position: fixed;
+    width: 300px;
+    min-height: 80px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    z-index: 1001;
+    transform: translate(-50%, 100%);
+    border: solid 1px black;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgb(255, 255, 255);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#modal-window-gmail.show-modal {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+#modal-window.show-modal {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+#back-modal {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.502);
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#back-modal.show-backdrop {
+  display: block;
+  opacity: 1;
+}
+
+
+
+#copyText {
+  user-select: none;
+  cursor: pointer;
+  padding: 5px;
+
+}
+
+#copyText:hover {
+  color: #637cc2;
+  transition: 0.3s;
+}
+
+.close {
+  padding: 15px;
+  background-color: transparent;
+  font-size: 16px;
+  cursor: pointer;
+
+}
+
+.close:hover {
+  color: #637cc2;
+  transition: 0.3s;
+  transform: scale(1.1);
+}
+
+#copiedPopup {
+  position: fixed;
+  top: 125%;
+  right: 35%;
+  background-color: #333;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 1000;
+}
+
+.telegram:hover{
+  background-color: #8dd9ffb5;
+}
+
+.telegram:hover a {
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.discord:hover {
+  background-color: #5662F6;
+  color: #fff;
+}
+
+
+
+.twitter:hover {
+  background-color: #3fbfffb5;
+}
+
+.twitter:hover a{
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.summary-gmail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 992px) {
-  /* .header-container, */
   .cards-wrapped,
   .skill-section,
   .skill-section-2,
@@ -456,20 +663,20 @@ header a:active {
   .skill-section-2 {
     margin: 0
   }
-  
+
   .influencer-wrapped {
     display: flex;
     justify-content: space-around;
   }
 
   .navigation ul {
-    /* flex-direction: column; */
     gap: 10px;
   }
 
   .cards {
     width: 90%;
     margin-bottom: 20px;
+    margin-left: 0px;
   }
 
   .skill-cube {
@@ -481,7 +688,6 @@ header a:active {
   }
 }
 
-/* Адаптив для телефонов */
 @media (max-width: 576px) {
   .logotext {
     font-size: 24px;

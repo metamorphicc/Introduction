@@ -13,13 +13,13 @@
 
 <!-- HEADER -->
 
-  <header class="header">
+  <header class="header" id="header">
     <div class="container header-container">
       <h1 class="logotext">
-        MORPH
+        <button onclick="scrollToTop()" style="font-size: 25px; background-color: transparent; cursor: pointer;">MORPH</button>
       </h1>
       <nav class="navigation">
-        <ul>
+        <ul>  
           <li><a href="https://introduction-ulhk.onrender.com/">Home</a></li>
           <li><a href="https://t.co/xx1sde833T" target="_blank">All links</a></li>
         </ul>
@@ -60,11 +60,18 @@
         <div class="my-img">
           <img src="image/morph.png" alt="morph" class="my-img" style="width: 200px; height: 200px; margin-right: 15px; border-radius: 50%; border: solid black 2px">
           <p style="margin-top: 15px">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Id consequatur provident necessitatibus possimus, autem voluptate iusto in ipsa fugit molestiae repellat non nemo modi neque recusandae a quasi maxime perspiciatis ipsam delectus! Autem reiciendis architecto deleniti numquam veritatis minus et eveniet ipsam ipsum voluptatum ex optio fugit eius quod atque tempore, ducimus quia magnam cumque repudiandae? Molestiae placeat repellendus quidem.
+            Hi! My name is Artem, I am an 18-year-old web3 developer. My development vector is quite diverse as I love my business and everything that is related to it,
+             respectively, and to study everything new in it. At the moment I specialise in full-stack development of decentralised applications using DeFi technologies.
+              I am also the author of morph(LOWBANKER) channel and have experience in working with cryptocurrency, I write articles on coding and try to spread my knowledge for others   
+
           </p>
         </div>
         <div class="under-intro">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium minus est perspiciatis totam doloribus illum, esse veritatis dicta quisquam. Fugiat molestias commodi assumenda recusandae. Qui repudiandae delectus, assumenda error ut soluta eius incidunt explicabo vero quia minus quos impedit nobis? Maxime illo quibusdam eum reprehenderit optio sint magnam fugit rerum excepturi voluptates mollitia, voluptatibus officiis eveniet sequi dolore veniam nostrum!</p>
+          <p>My goal is to build intuitive, secure, and inspiring interfaces for the decentralized world.
+            I value clean code, smart architecture, and subtle design details.
+            Always learning, always building.
+            My biggest goal is to create my own, useful dApp where people can learn about cryptocurrency and interact with it with great convenience, exchange, buy, monitor prices, ‘bridge’. 
+            Ready for absolutely any task, adaptable, because not for nothing called myself <strong>Morph</strong></p>
         </div>
         
         <div class="container-socials">
@@ -90,9 +97,9 @@
 
 <!-- EMPTY BLOCK-->
 
-<section class="empty-1">
+<!-- <section class="empty">
 
-</section> 
+</section>  -->
 
 <!--  -->
 
@@ -106,27 +113,27 @@
     <div class="cards-wrapped">
       <div class="cards fade-in-section">
         <h3 class="cards-title">DEVELOPER</h3>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam iusto maxime quod cupiditate ipsa sequi facilis vero numquam nam adipisci impedit ut magnam, 
-          possimus ipsam dicta optio harum voluptatum minus aperiam. Aut error blanditiis autem, nulla beatae sed atque aliquid!</p>
+        <p>I've been doing development for about 2 years now and all this time I've been learning and trying absolutely different directions, 
+          from creating games to smart contracts, but in the end I decided and chose my favourite direction.</p>
       </div>
       <div class="cards fade-in-section">
         <h3 class="cards-title">INFLUENCER</h3>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam iusto maxime quod cupiditate ipsa sequi facilis vero numquam nam adipisci impedit ut magnam, 
-          possimus ipsam dicta optio harum voluptatum minus aperiam. Aut error blanditiis autem, nulla beatae sed atque aliquid!</p>
+        <p >My channel has been running for a few years, the topics on it are: cryptocurrency, programming, web3, I also keep my twitter on the same topics. 
+          I have experience in creating articles and informative posts </p>
       </div>
       <div class="cards fade-in-section">
         <h3 class="cards-title">CRYPTO-ENJOYER</h3>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam iusto maxime quod cupiditate ipsa sequi facilis vero numquam nam adipisci impedit ut magnam, 
-          possimus ipsam dicta optio harum voluptatum minus aperiam. Aut error blanditiis autem, nulla beatae sed atque aliquid!</p>
+        <p>My experience in cryptocurrency is broad, I know the whole base about blockchain, defi, tokens and other things related to this business. 
+          I have participated in many projects, performed activities in them, was an ambassador, etc. The vector is completely different</p>
       </div>
     </div>
   </div>
 </section>
 <!--  -->
-
+<!-- 
 <section class="empty">
 
-</section>
+</section> -->
 
 <!-- MY WORKS -->
 <section class="my-activities">
@@ -176,28 +183,74 @@
 </section>
 <!--  -->
 
-<section class="empty">
+<!-- <section class="empty">
 
+</section> -->
+
+
+<section class="contact">
+  <div class="container">
+    <div class="contact-wrapped">
+      <div class="contact-me">
+      Contact me! 
+      </div>
+
+      <div class="buttons-contact">
+        <div class="main-buttons">
+          <button class="button-start twitter" >
+          <a href="https://x.com/morph_lowbanker" target="_blank">Twitter</a>
+        </button>
+        <button class="button-start discord" style="margin-right: 30px;"  onclick="openModal()">Discord</button>
+        <div class="back-modal" onclick="closeModal()" id="back-modal"></div>
+        <div class="modal-window fade-in-section" id="modal-window"">
+          <h3 style="margin-top: 10px"> My discord </h3>
+            <p id="copyText" onclick="copyEmail()"> morphh_2 </p>
+            <div id="copiedPopup">Copied!</div>
+              <button onclick="closeModal()" class="close">Close</button>
+            </div>
+        <button class="button-start telegram" >
+          <a href="https://t.me/rawzw" target="_blank" telegram>Telegram</a>
+        </button>
+      </div>
+        
+
+        <div class="summary-gmail">
+          <button class="button-start"style="margin-right: 30px; "  onclick="openModalGmail()">Gmail</button>
+        <div class="back-modal" onclick="closeModal()" id="back-modal"></div>
+        <div class="modal-window fade-in-section" id="modal-window-gmail"">
+          <h3 style="margin-top: 10px">My email👇🏻 </h3>
+            <p id="copyText" onclick="copyEmail()">morphbellovich@gmail.com</p>
+            <div id="copiedPopup">Copied!</div>
+              <button onclick="closeModalGmail()" class="close">Close</button>
+            </div>
+        <button class="button-start">
+          <a href="https://docs.google.com/document/d/129xpzvGWfHWn3KsPnq-liYBvslRgqHWsVzO9G_HfiUA/edit?usp=sharing" target="_blank">My Summary</a>
+        </button>
+      </div>
+        
+
+      </div>
+    </div>
+  </div>
 </section>
+
 
 <footer class="footer">
   <div class="container">
     <div class="footer-wrapper">
       <div>
         <ul class="list-footer-1">
-          <li>- <a href="#!">MY CHANNEL</a> -</li>
-          <li>- <a href="#!">GITHUB</a> -</li>
-          <li>- <a href="#!">EMAIL</a> -</li>
-          <li>- <a href="#!">X</a> -</li>
+          <!-- <li>- <a href="https://t.me/morphlowbanker" target="_blank">MY CHANNEL</a> -</li>
+          <li>- <a href="https://github.com/metamorphicc" target="_blank">GITHUB</a> -</li>
+          <li>- <a href="https://x.com/morph_lowbanker" target="_blank">TWITTER</a> -</li> -->
         </ul>
       </div>
       <button onclick="scrollToTop()" class="back-to-top" style="color: white">▲ Back to top ▲</button>
       <div >
         <ul class="list-footer-2">
-          <li>- <a href="#!">MY CHANNEL</a> -</li>
-          <li>- <a href="#!">GITHUB</a> -</li>
-          <li>- <a href="#!">EMAIL</a> -</li>
-          <li>- <a href="#!">X</a> -</li>
+          <!-- <li>- <a href="https://t.me/morphlowbanker" target="_blank">MY CHANNEL</a> -</li>
+          <li>- <a href="https://github.com/metamorphicc" target="_blank">GITHUB</a> -</li>
+          <li>- <a href="https://x.com/morph_lowbanker" target="_blank">TWITTER</a> -</li> -->
         </ul>
       </div>
     </div>

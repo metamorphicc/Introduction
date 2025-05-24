@@ -96,14 +96,6 @@ function closeModalGmail() {
   document.getElementById('header').style.backgroundColor = "#f4f7f9";
   document.body.style.overflow = "auto";
 }
-// function copyEmail() {
-//   const text = document.getElementById("copyText").innerText;
-//   navigator.clipboard.writeText(text).then(() => {
-//     console.log("Скопировано!");
-//   }).catch(err => {
-//     console.error("Ошибка копирования:", err);
-//   });
-// }
 
 function copyEmail() {
   const text = document.getElementById("copyText").innerText;
